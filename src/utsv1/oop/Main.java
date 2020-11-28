@@ -8,13 +8,14 @@ public class Main {
         String nama;
         double gaji;
         double tunjanganLemburPerJam;
+        double tunjangan;
         double overtime;
         Scanner input = new Scanner(System.in);
         System.out.println(".:PEGAWAI:.");
         System.out.println("---------------------------");
         System.out.print("Inputkan Nama Pegawai : ");
         nama = input.nextLine();
-        System.out.print("Inputkan Nama Pegawai : ");
+        System.out.print("Inputkan Gaji Pegawai : ");
         gaji = input.nextInt();
         System.out.println("---------------------------");
         Pegawai pegawai = new Pegawai(nama, gaji);
@@ -31,8 +32,9 @@ public class Main {
         tunjanganLemburPerJam = input.nextInt();
         System.out.print("Inputkan Lama Overtime Dalam Jam : ");
         overtime = input.nextInt();
+        tunjangan = tunjanganLemburPerJam*overtime;
         System.out.println("---------------------------");
-        Manajer manajer = new Manajer(nama, gaji, tunjanganLemburPerJam);
+        Manajer manajer = new Manajer(nama, gaji, tunjangan);
         System.out.println("Nama Manajer : " +manajer.getNama());
         System.out.println("Gaji Bersih Manajer : " +manajer.gajiBersih());
 
